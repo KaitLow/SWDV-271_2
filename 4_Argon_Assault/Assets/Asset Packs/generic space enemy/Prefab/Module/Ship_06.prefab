@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 23863082315245842}
   - component: {fileID: 3702368871434332490}
   - component: {fileID: 926928480}
+  - component: {fileID: 1778227680382919326}
+  - component: {fileID: 1688954557}
   m_Layer: 0
   m_Name: Ship_06
   m_TagString: Untagged
@@ -105,8 +107,32 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875551938172112}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.74731904, y: 0.11109692, z: 0.6822819}
   m_Center: {x: -1.6653345e-16, y: 0.0000000037252899, z: 2.1510571e-16}
+--- !u!114 &1778227680382919326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875551938172112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f240ef6e68b574794b5e25924439a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1688954557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875551938172112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f240ef6e68b574794b5e25924439a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
