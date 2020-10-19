@@ -33,7 +33,7 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("Player hit something");
+        //print("Player hit something");
     }
 
     // Update is called once per frame

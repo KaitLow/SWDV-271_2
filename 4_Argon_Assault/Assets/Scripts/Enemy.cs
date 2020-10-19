@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] GameObject deathFX; // deaths effect for enemy ships
+    [SerializeField] Transform parent;  // placeholder to destroy deathFX when done
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,9 @@ public class Enemy : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parent;
+
         print("Particles collided with enemy" + gameObject.name);
         Destroy(gameObject);
     }
