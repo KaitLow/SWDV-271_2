@@ -30,6 +30,8 @@ public class Enemy : MonoBehaviour
     {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
+        ScoreBoard scoreBoard = FindObjectOfType<ScoreBoard>();
+        scoreBoard.ScoreHit();
 
         print("Particles collided with enemy" + gameObject.name);
         Destroy(gameObject);
