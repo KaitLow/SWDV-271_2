@@ -2104,6 +2104,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963194228}
     m_Modifications:
+    - target: {fileID: 1327651389187842721, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.478
+      objectReference: {fileID: 0}
     - target: {fileID: 3989689727402294503, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
         type: 3}
       propertyPath: CollisionModule.minKillSpeed
@@ -2124,6 +2129,21 @@ PrefabInstance:
       propertyPath: moveWithTransform
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3989689727402294503, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.scalar
+      value: 0.005410521
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989689727402294503, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989689727402294503, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4373340982753535483, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
         type: 3}
       propertyPath: CollisionModule.minKillSpeed
@@ -2138,6 +2158,26 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSpeed.scalar
       value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373340982753535483, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373340982753535483, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373340982753535483, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917928024879299632, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7684364297473185341, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
         type: 3}
@@ -2198,6 +2238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234831759781621617, guid: 8aafd565b4ac4384ba5407b389cbf4a6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aafd565b4ac4384ba5407b389cbf4a6, type: 3}

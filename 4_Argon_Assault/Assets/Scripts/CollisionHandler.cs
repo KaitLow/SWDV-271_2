@@ -35,10 +35,4 @@ public class CollisionHandler : MonoBehaviour
     {
         //print("Player hit something");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

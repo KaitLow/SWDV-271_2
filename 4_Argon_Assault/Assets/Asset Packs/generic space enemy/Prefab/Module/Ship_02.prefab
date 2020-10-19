@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33219907115598346}
   - component: {fileID: 23021765208169616}
   - component: {fileID: 587637419746860392}
-  - component: {fileID: 1719399347}
   - component: {fileID: 6702310965876041242}
   m_Layer: 0
   m_Name: Ship_02
@@ -98,19 +97,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1719399347
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238095480485456}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.66270846, y: 0.48463184, z: 0.14032462}
-  m_Center: {x: -1.110223e-16, y: 0, z: -0.0000000037252907}
 --- !u!114 &6702310965876041242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f240ef6e68b574794b5e25924439a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathFX: {fileID: 0}
+  parent: {fileID: 0}
