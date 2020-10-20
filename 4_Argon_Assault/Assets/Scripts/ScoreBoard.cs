@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
-    // FA20 Branch change
+    // FA20Test Real Branch change
     [SerializeField] int score = 0;
     Text scoreText;
 
