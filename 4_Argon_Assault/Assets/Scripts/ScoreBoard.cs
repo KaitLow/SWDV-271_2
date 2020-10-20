@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
+    // This is the new branch
     [SerializeField] int score = 0;
     Text scoreText;
 
