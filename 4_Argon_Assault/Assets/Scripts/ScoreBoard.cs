@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreBoard : MonoBehaviour
 {
     // Change A
+    // CHange B
     [SerializeField] int score = 0;
     Text scoreText;
 
