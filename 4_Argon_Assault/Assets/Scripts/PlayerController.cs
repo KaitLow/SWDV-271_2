@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets;
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
     float xThrow, yThrow;  // need to access this infor from other locations.
     bool isControlEnabled = true;
 
+    [SerializeField] GameObject[] guns;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +38,23 @@ public class PlayerController : MonoBehaviour
         {
             ProcessTranslation();  // takes place before ProcessRotation() to set Throw
             ProcessRotation();
+            ProcessFiring();
         }
     }
+
+    private void ProcessFiring()
+    {
+        bool enableGun = CrossPlatformInputManager.GetAxis("Fire 1") > Mathf.Epsilon;
+        {
+            //print("Number of guns" + guns.Length);
+            foreach(GameObject gun in guns)
+            {
+                gun.SetActive(enableGun);
+            }
+        }
+        
+    }
+
     void OnPlayerDeath()  //called by string reference
     {
         isControlEnabled = false;

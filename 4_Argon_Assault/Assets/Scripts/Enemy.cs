@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject deathFX; // deaths effect for enemy ships
     [SerializeField] Transform parent;  // placeholder to destroy deathFX when done
     [SerializeField] int scoreIncrease = 12;
+    [SerializeField] int hits = 3;
 
     ScoreBoard scoreBoard;
 
@@ -31,6 +32,15 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnParticleCollision(GameObject other)
+    {
+        // todo add hit FX
+        if(--hits <=1)
+        {
+            KillEnemy();
+        }
+    }
+
+    private void KillEnemy()
     {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
