@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
+    // Change A
     [SerializeField] int score = 0;
     Text scoreText;
 
