@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
     // Making player state in the air
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name.Equals("Plane"))  // todo track name of 'Plane' or 
+        if (collision.gameObject.name.Equals("Platform"))  // todo track name of 'Plane' or 
                                                         // identify some other way
         {
             {
