@@ -34,6 +34,7 @@ public class EnemyAi : MonoBehaviour
             isProvoked = true;         
         }       
     }
+
     private void EngageTarget()
     {
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
@@ -53,5 +54,4 @@ public class EnemyAi : MonoBehaviour
     {
         Debug.Log("has attacked");
     }
-
 }

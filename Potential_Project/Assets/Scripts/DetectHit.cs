@@ -5,25 +5,42 @@ using UnityEngine.UI;
 
 public class DetectHit : MonoBehaviour
 {
-    public Slider healthbar;
-    Animator anim;
+    [SerializeField] GameObject deathFX; // deaths effect for enemy ships
+    [SerializeField] Transform parent;  // placeholder to destroy deathFX when done
+    [SerializeField] int goldIncrease = 10;
+    [SerializeField] int hits = 3;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        healthbar.value -= 20;
-        
-        if (healthbar.value <= 0)
-        {
-            anim.SetBool("die", true);
-        }
-    }
+    ScoreBoard goldBoard;
+    public Slider healthbar;
+    //Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
+        //AddNonTriggerBoxCollider();
+        goldBoard = FindObjectOfType<ScoreBoard>();
     }
+    //private void AddNonTriggerBoxCollider()
+    //{
+    //    Collider boxCollider = gameObject.AddComponent<BoxCollider>();
+    //    boxCollider.isTrigger = false;
+    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (--hits <= 1)
+        {
+            KillEnemy();
+        }
+    }
+    private void KillEnemy()
+    {
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parent;
+        goldBoard.ScoreHit(goldIncrease);
 
+        Destroy(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
