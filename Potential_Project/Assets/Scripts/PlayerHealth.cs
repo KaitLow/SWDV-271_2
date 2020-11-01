@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class PlayerHealth : MonoBehaviour
     // For other Game Objects
     public Canvas playerCanvas;
     public Slider playerHealthSlider;
+    void Start()
+    {
+        Invoke("LoadFirstScene", 1);
+    }
     void Awake()
     {
         currentHealth = fullHealth;
@@ -43,5 +48,9 @@ public class PlayerHealth : MonoBehaviour
             pController.enabled = false;
         }
     }
-    
+    void LoadFirstScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 }

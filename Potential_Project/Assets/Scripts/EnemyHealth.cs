@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] GameObject deathFX; // deaths effect for enemy 
+    [SerializeField] Transform parent;  // placeholder to destroy deathFX when done
+    [SerializeField] int goldIncrease = 10;
+    ScoreBoard goldBoard;
     // For Variables
     public float fullHealth;
     public float currentHealth;
@@ -14,6 +18,10 @@ public class EnemyHealth : MonoBehaviour
     // For Global Components
     public Canvas enemyCanvas;
     public Slider enemyHealthSlider;
+    void Start()
+    {
+        goldBoard = FindObjectOfType<ScoreBoard>();
+    }
 
     void Awake()
     {
@@ -40,6 +48,10 @@ public class EnemyHealth : MonoBehaviour
     }
     public void MakeDied()
     {
-        Destroy(gameObject, 3f);
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parent;
+        goldBoard.ScoreHit(goldIncrease);
+
+        Destroy(gameObject);
     }
 }
