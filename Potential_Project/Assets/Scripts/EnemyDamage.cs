@@ -47,10 +47,10 @@ public class EnemyDamage : MonoBehaviour
     {
         if(nextDamage <= DateTime.Now)
         {
-            //if(enemyObj.GetComponent<EnemyHealth>().enemyDied == false)
-            //{
-            //    enemyObj.GetComponent<EnemyHealth>().AddDamage(enemyDamageAmount);
-            //}
+            if (enemyObj.GetComponent<EnemyHealth>().enemyDied == false)
+            {
+                enemyObj.GetComponent<EnemyHealth>().AddDamage(enemyDamageAmount);
+            }
             nextDamage = DateTime.Now.AddSeconds(System.Convert.ToDouble(damageAfterTime));
         }
     }
